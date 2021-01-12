@@ -1,0 +1,58 @@
+footer {
+    padding-top: 2rem;
+    height: 120px;
+    border-top: 5px solid #e4e4e4;
+}
+
+.copywrite {
+  display: flex;
+  align-items: center;
+}
+
+.copywrite > p {
+  position: absolute;
+  right: 0px;
+  font-size: 12px;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.5px black;
+  letter-spacing: 1px;
+  margin: 1rem 0 0 0;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c162e5;
+  font-size: 40px;
+}
+
+.social-media > i {
+    padding: 0 15px;
+}
+
+.main-icon{
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 768px) /* and (max-width: 768px) */ {
+  .copywrite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .copywrite > p {
+    position: absolute;
+    right: auto;
+    font-size: 12px;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.5px black;
+    letter-spacing: 1px;
+    margin: 1rem 0 0 0;
+  }
+
+  .f-logo{
+    text-align: center;
+  }
+}

@@ -1,0 +1,58 @@
+.app-header {
+  display: flex;
+  height: 140px;
+}
+
+.app-logo {
+  height: 100px;
+}
+
+.app-navbar {
+  margin-top: 40px;
+  display: flex;
+  font-size: 12px;
+  justify-content: flex-end;
+}
+
+.app-nav-list {
+  display: inline;
+  padding-left: 40px;
+  text-transform: capitalize;
+  font-weight: bolder;
+  color: #808080;
+  white-space: nowrap;
+}
+
+.app-nav-list:hover{
+  color: #808080;
+  text-decoration: none;
+}
+
+.selected {
+  color: #c162e5;
+  height: 25px;
+}
+
+.selected>.app-nav-list-hr {
+  display: block;
+}
+
+.app-nav-list-hr {
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+  border: 2px solid #c162e5 !important;
+  border-radius: 10px;
+  margin-top: 0.5rem !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .app-header {
+    display: flex;
+    height: 175px;
+  }
+
+  .app-nav-list{
+    padding-left: 25px;
+  }
+}

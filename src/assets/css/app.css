@@ -1,0 +1,19 @@
+.primary {
+  background: #c162e5;
+}
+
+.secondary {
+  background: #fff;
+}
+
+.font-white{
+  color:#fff
+}
+
+.font-primary{
+  color:#c162e5
+}
+
+.unused-container{
+  text-align: center;
+}

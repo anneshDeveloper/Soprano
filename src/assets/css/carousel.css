@@ -1,0 +1,8 @@
+.c-image {
+  height: calc(100vh - 140px);
+}
+
+.carousel .thumbs-wrapper,
+.carousel .control-dots {
+  display: none;
+}

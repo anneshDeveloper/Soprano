@@ -1,0 +1,32 @@
+.demo-card {
+  padding: 3rem;
+  width: 100%;
+}
+
+.demo-header {
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 0.3px black;
+  text-align: center;
+}
+
+.demo-para {
+  color: #7f7f7f;
+  font-size: 14px;
+  text-align: center;
+}
+
+.demo-card-image {
+  height: 250px;
+  width: 100%;
+}
+
+.demo-card-image-name {
+  font-size: 18px;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.5px black;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 2.5rem;
+}

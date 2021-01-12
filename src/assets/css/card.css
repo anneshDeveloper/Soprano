@@ -1,0 +1,44 @@
+.app-card {
+  padding: 2rem 3.5rem;
+  border: 1px solid #c162e5;
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.app-card:hover {
+  box-shadow: 10px 10px 129px 0px rgba(0, 0, 0, 0.35);
+}
+
+.avater {
+  height: 100px;
+  border-radius: 50%;
+}
+
+.client-name {
+  font-size: 24px;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.5px black;
+  letter-spacing: 1px;
+}
+
+.client-name-holder {
+  display: flex;
+  align-items: center;
+}
+
+.client-details {
+  margin-top: 2rem;
+  font-size: 14px;
+  -webkit-text-stroke: 0.2px black;
+}
+
+@media only screen and /* (min-width: 768px) and  */(max-width: 768px) {
+  .client-name {
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.5px black;
+    letter-spacing: 1px;
+  }
+}
