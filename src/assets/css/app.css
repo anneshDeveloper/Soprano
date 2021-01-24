@@ -17,3 +17,22 @@
 .unused-container{
   text-align: center;
 }
+
+#selected-img,
+.display-pieces{
+  width:100%;
+  /* border:1px solid #000000 */
+}
+
+.pieces{
+  width: 100%;
+  height: 200px;
+}
+
+.pieces-cont{
+  padding: 2px !important;
+}
+
+.padding-y{
+  padding: 20px 0;
+}

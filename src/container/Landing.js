@@ -7,6 +7,7 @@ import Demos from "../components/section/demos/Demos";
 import OurProduct from "../components/section/ourProduct/OurProduct";
 import Footer from "../components/footer/Footer";
 import Carousel from "../components/carousel/Carousel";
+import ImageProcess from "../components/imageProcess/ImageProcess"
 
 class Landing extends Component {
   render() {
@@ -17,6 +18,7 @@ class Landing extends Component {
         <Demos />
         <BusinessJourney />
         <OurProduct />
+        <ImageProcess />
         <Newsletter />
         <Footer />
       </Fragment>
