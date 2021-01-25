@@ -6,27 +6,30 @@ class ImageProcess extends Component {
     super(props);
     this.state = {
       image: "",
+      imageWidth: "",
+      imageHeight: "",
       imagePieces: [],
       newPieces: [],
     };
   }
 
   cutImageUp = async () => {
+    const { imageHeight, imageWidth } = this.state;
     var imagePieces = [];
     for (var x = 0; x < 4; ++x) {
       for (var y = 0; y < 4; ++y) {
         var canvas = document.createElement("canvas");
-        canvas.width = 277;
-        canvas.height = 150;
+        canvas.width = imageWidth/4/* 277 */;
+        canvas.height = imageHeight/4/* 150 */;
         var context = canvas.getContext("2d");
         var img = new Image();
         img.src = this.state.image;
         context.drawImage(
           img,
-          y * 277,
-          x * 150,
-          350,
-          100,
+          y * (imageWidth/4)/* 277 */,
+          x * (imageHeight/4)/* 150 */,
+          (imageWidth/4)/* 350 */,
+          (imageHeight/4)/* 100 */,
           0,
           0,
           canvas.width,
@@ -41,8 +44,22 @@ class ImageProcess extends Component {
   onImageChange = (event) => {
     if (event.target.files && event.target.files[0]) {
       let reader = new FileReader();
+      let height;
+      let width;
       reader.onload = (e) => {
-        this.setState({ image: e.target.result }, () => this.cutImageUp());
+        var image = new Image();
+
+        image.src = e.target.result;
+
+        image.onload = (e) => {
+          height = e.target.height;
+          width = e.target.width
+          this.setState(
+            { image: image.src, imageWidth: width, imageHeight: height },
+            () => this.cutImageUp()
+          );
+          return true;
+        };
       };
       reader.readAsDataURL(event.target.files[0]);
     }
@@ -111,10 +128,20 @@ class ImageProcess extends Component {
           {image && (
             <Row>
               <Col sm={6} className="padding-y">
-                <button onClick={() => this.shuffle()} className={"button font-white primary button-text"}>Shuffle</button>
+                <button
+                  onClick={() => this.shuffle()}
+                  className={"button font-white primary button-text"}
+                >
+                  Shuffle
+                </button>
               </Col>
               <Col sm={6} className="padding-y">
-                <button onClick={() => this.unshuffle()} className={"button font-white primary button-text"}>Unshuffle</button>
+                <button
+                  onClick={() => this.unshuffle()}
+                  className={"button font-white primary button-text"}
+                >
+                  Unshuffle
+                </button>
               </Col>
             </Row>
           )}
